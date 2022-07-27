@@ -4,9 +4,13 @@
 	--color-text: #333;
 	--color-bg: #fafafa;
 	--color-heading: #333;
-	--color-divider: #e7e7e7;
+	--color-divider: #e2e2e2;
 	--color-anchor: #337ab7;
 	--color-toggle-checked: #9740f6;
+	--color-table-row-header: #e8e6e6;
+	--color-table-row-odd: #fbfbfb;
+	--color-table-row-even: #f0f0f0;
+	--color-table-border: #c2c2c2;
 }
 
 /* Dark Mode Colors */
@@ -14,8 +18,12 @@ html.dark {
 	--color-text: #fafafa;
 	--color-bg: #1c1c1c;
 	--color-heading: #dfdfdf;
-	--color-divider: #393939;
+	--color-divider: #8b8b8b;
 	--color-anchor: #77e1cd;
+	--color-table-row-header: #000;
+	--color-table-row-odd: #333333;
+	--color-table-row-even: #181818;
+	--color-table-border: #767676;
 }
 
 /* Global colors */
@@ -26,6 +34,7 @@ html, body {
 
 #doc h1, #doc h2, #doc h3, #doc h4, #doc h5, #doc h6 {
 	color: var(--color-heading);
+	border-color: var(--color-divider);
 }
 
 #doc, #doc div, #doc span, #doc p, #doc li, #doc th, #doc td, #doc dd, #doc dl {
@@ -36,8 +45,31 @@ html, body {
 	color: var(--color-anchor);
 }
 
-.markdown-body hr {
+#doc hr {
 	background-color: var(--color-divider);
+}
+
+#doc table thead tr, #doc table tr.header {
+	background-color: var(--color-table-row-header);
+}
+
+#doc table tbody tr, #doc table tr.odd {
+	background-color: var(--color-table-row-odd);
+}
+
+#doc table tbody tr:nth-child(2n), #doc table tr.even {
+	background-color: var(--color-table-row-even);
+}
+
+#doc table th, #doc table td {
+	border-color: var(--color-table-border);
+}
+
+/*
+	Dark Mode Images
+*/
+html.dark #doc img.invert {
+	filter: invert(1)
 }
 
 /* Light/Dark Mode Toggle */
