@@ -185,10 +185,10 @@ somewhere in the middle of a computation, they can make it give a
 completely different result, and a random sampling verifier would almost
 never find out.</p>
 <center>
-<img src="../../../../images/snarks-files/randomsample.png" /> <br><br>
-<i><small>It only takes one deliberately inserted error, that a random
-check would almost never catch, to make a computation give a completely
-incorrect result.</small></i>
+<img src="../../../../images/snarks-files/randomsample.png" class="padded" />
+<br><br> <i><small>It only takes one deliberately inserted error, that a
+random check would almost never catch, to make a computation give a
+completely incorrect result.</small></i>
 </center>
 <p><br></p>
 <p>If tasked with the problem of coming up with a zk-SNARK protocol,
@@ -274,9 +274,9 @@ answers <em>outside</em> the range <span class="math inline">\(x = \{0,
 is a rule that if a polynomial <span class="math inline">\(P\)</span> is
 zero across some set <span class="math inline">\(S=\{x_1, x_2 ...
 x_n\}\)</span> then it can be expressed as <span
-class="math inline">\(P(x) = Z(x) * H(x)\)</span>, where <span
+class="math inline">\(P(x) = Z(x) *H(x)\)</span>, where <span
 class="math inline">\(Z(x) =\)</span> <span class="math inline">\((x -
-x_1) * (x - x_2) * ... * (x - x_n)\)</span> and <span
+x_1)* (x - x_2) *...* (x - x_n)\)</span> and <span
 class="math inline">\(H(x)\)</span> is also a polynomial. In other
 words, <strong>any polynomial that equals zero across some set is a
 (polynomial) multiple of the simplest (lowest-degree) polynomial that
@@ -313,8 +313,8 @@ class="math inline">\(P(x) =\)</span> <span class="math inline">\(F(x+2)
 quotient:</p>
 <p><span class="math inline">\(H(x) = \frac{F(x+2) - F(x+1) -
 F(x)}{Z(x)}\)</span></p>
-<p>Where <span class="math inline">\(Z(x) = (x - 0) * (x - 1) * ... * (x
-- 98)\)</span>.</p>
+<p>Where <span class="math inline">\(Z(x) = (x - 0) *(x - 1)* ... * (x -
+98)\)</span>.</p>
 <p>You can calculate <span class="math inline">\(Z(x)\)</span> yourself
 (ideally you would have it precomputed), check the equation, and if the
 check passes then <span class="math inline">\(F(x)\)</span> satisfies
@@ -365,10 +365,10 @@ class="math inline">\(P(w) = z\)</span></li>
 other. If you can add and multiply, then you can evaluate: to prove that
 <span class="math inline">\(P(w) = z\)</span>, you can construct <span
 class="math inline">\(Q(x) = \frac{P(x) - z}{x - w}\)</span>, and the
-verifier can check if <span class="math inline">\(Q(x) * (x - w) + z
+verifier can check if <span class="math inline">\(Q(x) *(x - w) + z
 \stackrel{?}{=} P(x)\)</span>. This works because if such a polynomial
 <span class="math inline">\(Q(x)\)</span> <em>exists</em>, then <span
-class="math inline">\(P(x) - z = Q(x) * (x - w)\)</span>, which means
+class="math inline">\(P(x) - z = Q(x)* (x - w)\)</span>, which means
 that <span class="math inline">\(P(x) - z\)</span> equals zero at <span
 class="math inline">\(w\)</span> (as <span class="math inline">\(x -
 w\)</span> equals zero at <span class="math inline">\(w\)</span>) and so
@@ -385,7 +385,7 @@ if all we have is a mechanism to prove evaluations, we can check eg. our
 equation <span class="math inline">\(P(x + 2) - P(x + 1) - P(x) = Z(x) *
 H(x)\)</span> using an interactive game:</p>
 <center>
-<img src="../../../../images/snarks-files/SchwartzZippel.png" />
+<img src="../../../../images/snarks-files/SchwartzZippel.png" class="padded" />
 <br><br>
 </center>
 <p>As I alluded to earlier, we can make this <em>non-interactive</em>
@@ -516,7 +516,8 @@ class="math inline">\(S\)</span>, progressively "reducing" the
 polynomial we care about to a lower and lower degree, until it's at a
 sufficiently low degree that we can check it directly.</p>
 <center>
-<img src="../../../../images/snarks-files/FRI.png" /> <br><br>
+<img src="../../../../images/snarks-files/FRI.png" class="padded" />
+<br><br>
 </center>
 <p>As in the previous examples, "Bob" here is an abstraction, useful for
 cryptographers to mentally reason about the protocol. In reality, Alice
@@ -608,8 +609,8 @@ is always non-negative, so for example <span class="math inline">\(-1\
 \%\ 10 = 9\)</span>). We redefine</p>
 <p><span class="math inline">\(x + y \Rightarrow (x + y)\)</span> %
 <span class="math inline">\(p\)</span></p>
-<p><span class="math inline">\(x * y \Rightarrow (x * y)\)</span> %
-<span class="math inline">\(p\)</span></p>
+<p><span class="math inline">\(x *y \Rightarrow (x* y)\)</span> % <span
+class="math inline">\(p\)</span></p>
 <p><span class="math inline">\(x^y \Rightarrow (x^y)\)</span> % <span
 class="math inline">\(p\)</span></p>
 <p><span class="math inline">\(x - y \Rightarrow (x - y)\)</span> %
@@ -658,7 +659,7 @@ href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm">extended
 Euclidean algorithm</a>, implemented in python <a
 href="https://github.com/ethereum/py_ecc/blob/b036cf5cb37e9b89622788ec714a7da9cdb2e635/py_ecc/secp256k1/secp256k1.py#L34">here</a>.</p>
 <center>
-<img src="../../../../images/snarks-files/clock.png" style="width:350px" /><br><br>
+<img src="../../../../images/snarks-files/clock.png" style="width:350px" class="padded" /><br><br>
 <small>Because of how the numbers "wrap around", modular arithmetic is
 sometimes called "clock math"</small>
 </center>
@@ -697,14 +698,14 @@ range <span class="math inline">\(\{0...63\}\)</span></li>
 </ul>
 <p>The latter two statements can be restated as "pure" polynomial
 equations as follows (in this context <span class="math inline">\(Z(x) =
-(x - 0) * (x - 1) * ... * (x - 63)\)</span>):</p>
+(x - 0) *(x - 1)* ... * (x - 63)\)</span>):</p>
 <ul>
-<li><span class="math inline">\(P(x+1) - P(x) * 2 - R(x) = Z(x) *
+<li><span class="math inline">\(P(x+1) - P(x) *2 - R(x) = Z(x)*
 H_1(x)\)</span></li>
-<li><span class="math inline">\(R(x) * (1 - R(x)) = Z(x) *
-H_2(x)\)</span> (notice the clever trick: <span class="math inline">\(y
-* (1-y) = 0\)</span> if and only if <span class="math inline">\(y \in
-\{0, 1\}\)</span>)</li>
+<li><span class="math inline">\(R(x) *(1 - R(x)) = Z(x)* H_2(x)\)</span>
+(notice the clever trick: <span class="math inline">\(y * (1-y) =
+0\)</span> if and only if <span class="math inline">\(y \in \{0,
+1\}\)</span>)</li>
 </ul>
 <p>The idea is that successive evaluations of <span
 class="math inline">\(P(i)\)</span> build up the number bit-by-bit: if

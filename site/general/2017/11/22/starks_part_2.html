@@ -127,7 +127,7 @@ the same line, <span class="math inline">\(deg &lt; 3\)</span> means
 they're on the same line or parabola, etc). You want to create a
 succinct probabilistic proof that this is actually true.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri1.png" style="width:500px" /><br><br>
+<img src="../../../../images/starks-part-2-files/fri1.png" style="width:500px" class="padded" /><br><br>
 <small>Left: points all on the same <span class="math inline">\(deg &lt;
 3\)</span> polynomial. Right: points not on the same <span
 class="math inline">\(deg &lt; 3\)</span> polynomial</small>
@@ -178,7 +178,7 @@ class="math inline">\(&lt; D\)</span> polynomial that passes through all
 of them. Then, randomly sample one more point, and check that it is on
 the same polynomial.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri2.png" style="width:420px" /><br>
+<img src="../../../../images/starks-part-2-files/fri2.png" style="width:420px" class="padded" /><br>
 </center>
 <p><br></p>
 <p>Note that this is only a proximity test, because there's always the
@@ -259,7 +259,7 @@ committed to by the prover. The verifier checks that the Merkle branches
 match up, and that the points that the prover provides actually do
 correspond to a degree-1000 polynomial.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri3.png" style="width:450px" />
+<img src="../../../../images/starks-part-2-files/fri3.png" style="width:450px" class="padded" />
 </center>
 <p><br></p>
 <p>This gives the verifier a statistical proof that (i) most rows are
@@ -358,7 +358,7 @@ href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm">extended
 Euclidean algorithm</a>, implemented in python <a
 href="https://github.com/ethereum/py_ecc/blob/b036cf5cb37e9b89622788ec714a7da9cdb2e635/py_ecc/secp256k1/secp256k1.py#L34">here</a>.</p>
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Clock_group.svg/560px-Clock_group.svg.png" style="width:350px" /><br><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Clock_group.svg/560px-Clock_group.svg.png" style="width:350px" class="padded" /><br><br>
 <small>Because of how the numbers "wrap around", modular arithmetic is
 sometimes called "clock math"</small>
 </center>
@@ -382,7 +382,7 @@ example, <span class="math inline">\(x \rightarrow x^2\)</span> with
 <span class="math inline">\(p=17\)</span> has only 9 possible
 results.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri4.png" style="width:350px" /><br>
+<img src="../../../../images/starks-part-2-files/fri4.png" style="width:350px" class="padded" /><br>
 </center>
 <p><br></p>
 <p>With higher exponents the results are more striking: for example,
@@ -422,7 +422,7 @@ the full evaluation of <span class="math inline">\(g(x,
 x^{1000})\)</span> now has only ~<span
 class="math inline">\(10^{15}\)</span> elements.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri5.png" style="width:500px" />
+<img src="../../../../images/starks-part-2-files/fri5.png" style="width:500px" class="padded" />
 </center>
 <p><br></p>
 <p>As it turns out, we can go further: we can have the prover only
@@ -435,7 +435,7 @@ on the column is on the same polynomial. We then check that the column
 itself is <span class="math inline">\(a &lt; 1000\)</span>
 polynomial.</p>
 <center>
-<img src="../../../../images/starks-part-2-files/fri6.png" style="width:550px" />
+<img src="../../../../images/starks-part-2-files/fri6.png" style="width:550px" class="padded" />
 </center>
 <p><br></p>
 <p>The verifier complexity is still sublinear, but the prover complexity
@@ -478,7 +478,7 @@ complexity is something like <span class="math inline">\(n + \frac{n}{2}
 + \frac{n}{4} + ... \approx 2n\)</span>.</p>
 <br>
 <center>
-<img src="../../../../images/starks-part-2-files/fri7.png" style="width:500px" />
+<img src="../../../../images/starks-part-2-files/fri7.png" style="width:500px" class="padded" />
 </center>
 <p><br></p>
 <p>In reality, the protocol will need to be repeated several times,

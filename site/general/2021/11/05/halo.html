@@ -235,13 +235,13 @@ pseudo-random procedure that can be re-executed by anyone (eg. the x
 coordinate of <span class="math inline">\(G_i\)</span> can be <span
 class="math inline">\(hash(i, j)\)</span> for the lowest integer <span
 class="math inline">\(j \ge 0\)</span> that produces a valid point);
-this is <em>not</em> a trusted setup as it does not rely on any specific
-party to introduce secret information.</p>
+this is_not_ a trusted setup as it does not rely on any specific party
+to introduce secret information.</p>
 <p>To commit to a polynomial <span class="math inline">\(P(x) = \sum_i
 c_i x^i\)</span>, the prover computes <span class="math inline">\(com(P)
 = \sum_i c_i G_i\)</span>. For example, <span
 class="math inline">\(com(x^2 + 4)\)</span> would equal <span
-class="math inline">\(G_2 + 4 * G_0\)</span> (remember, the <span
+class="math inline">\(G_2 + 4 *G_0\)</span> (remember, the <span
 class="math inline">\(+\)</span> and <span
 class="math inline">\(*\)</span> here are <a
 href="https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3">elliptic
@@ -252,7 +252,8 @@ privacy for now; in general, it's not that hard to add privacy into all
 of these schemes.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments1.png" /></p>
+<p><img src="../../../../images/halo/commitments1.png"
+class="padded" /></p>
 <p><small></p>
 <p><em>Though it's not really mathematically accurate to think of
 elliptic curve points as being like real numbers that have sizes, area
@@ -282,9 +283,9 @@ commitment of something, but what we care about is proving that the
 prover <em>knows</em> some <span class="math inline">\(\{c_0 ...
 c_{n-1}\}\)</span> such that <span class="math inline">\(\sum_i c_i G_i
 = C\)</span>. A commitment <span class="math inline">\(C\)</span> cannot
-commit to multiple distinct polynomials <em>that the prover knows
-about</em>, because if it could, that would imply that elliptic curves
-are broken.</p>
+commit to multiple distinct polynomials_that the prover knows about_,
+because if it could, that would imply that elliptic curves are
+broken.</p>
 <p>The prover <em>could</em>, of course, just provide <span
 class="math inline">\(\{c_0 ... c_{n-1}\}\)</span> directly and let the
 verifier check the commitment. But this takes too much space. So
@@ -295,7 +296,8 @@ class="math inline">\(R\)</span>, representing the yellow and green
 areas in this diagram:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments2.png" /></p>
+<p><img src="../../../../images/halo/commitments2.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>You may be able to see where this is going: if you add <span
@@ -318,7 +320,8 @@ class="math inline">\(L\)</span> and <span
 class="math inline">\(R\)</span>:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments3.png" /></p>
+<p><img src="../../../../images/halo/commitments3.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Choose a random factor <span class="math inline">\(\alpha\)</span>
@@ -374,7 +377,8 @@ class="math inline">\(\alpha^2\)</span> terms.)</p>
 <p>And then we repeat the process until we get down to one point:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments4.png" /></p>
+<p><img src="../../../../images/halo/commitments4.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Finally, we have a size-1 problem: prove that the final modified
@@ -440,7 +444,8 @@ addition for the points and regular field addition for the numbers.</p>
 <p>We can make a Pedersen commitment using this extended base!</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments5.png" /></p>
+<p><img src="../../../../images/halo/commitments5.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Now, here's a puzzle. Suppose <span class="math inline">\(P(x) =
@@ -562,7 +567,8 @@ class="math inline">\(L(t) = e_1 + re_2\)</span>.</li>
 </ul>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/proof_combining.png" /></p>
+<p><img src="../../../../images/halo/proof_combining.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>The verifier still needs to do a bunch of extra steps, but all of
@@ -600,7 +606,8 @@ a proof of a proof will take even longer to verify than both proofs
 separately. But proof merging can do it!</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/recursion.png" /></p>
+<p><img src="../../../../images/halo/recursion.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Essentially, we use the usual "recursive SNARK" technique to verify
@@ -626,8 +633,8 @@ statement that needs to be proven</li>
 <li>The prover proves the correctness of the new block plus the
 logarithmic work in the previous statements by generating a <a
 href="https://vitalik.ca/general/2019/09/22/plonk.html#putting-it-all-together">PLONK
-proof</a>: <span class="math inline">\(Q_L * A + Q_R * B + Q_O * C + Q_M
-* A * B + Q_C = Z * H\)</span></li>
+proof</a>: <span class="math inline">\(Q_L *A + Q_R* B + Q_O *C + Q_M* A
+*B + Q_C = Z* H\)</span></li>
 <li>The prover chooses a random point <span
 class="math inline">\(t\)</span>, and proves the evaluation of a linear
 combination of <span class="math inline">\(\{G^*_0,\ Q_L,\ A,\ Q_R,\ B,\
@@ -718,7 +725,7 @@ requiring the last entry of <span class="math inline">\(Z\)</span> to be
 1).</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/r1cs.png" style="width:450px" /></p>
+<p><img src="../../../../images/halo/r1cs.png" style="width:450px" class="padded" /></p>
 <p><br></p>
 <p><em>An R1CS instance with a single constraint (so <span
 class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>

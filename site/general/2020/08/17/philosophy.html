@@ -140,7 +140,7 @@ consensus mechanisms better than the single-chain "Nakamoto" proof of
 work that the blockchain space originally started with.</p>
 <h2 id="why-validate">Why validate?</h2>
 <center>
-<img src="../../../../images/philosophy/badminer.png" />
+<img src="../../../../images/philosophy/badminer.png" class="padded" />
 <br><br><small><i>A 51% attack pushing through an invalid block. We want
 the network to reject the chain!</i></small>
 </center>
@@ -190,13 +190,14 @@ personally can stay on the chain with the old rules that you favor.</p>
 <p>Here is one example of the "by definition" perspective <a
 href="http://gavinandresen.ninja/a-definition-of-bitcoin">from Gavin
 Andresen</a>:</p>
-<p><img
-src="../../../../images/philosophy/definition_of_bitcoin.png" /></p>
+<p><img src="../../../../images/philosophy/definition_of_bitcoin.png"
+class="padded" /></p>
 <p>Here's another from <a
 href="https://docs.wasabiwallet.io/using-wasabi/BitcoinFullNode.html#the-importance-of-running-a-full-node">the
 Wasabi wallet</a>; this one comes even more directly from the
 perspective of explaining why full nodes are valuable:</p>
-<p><img src="../../../../images/philosophy/wasabi.png" /></p>
+<p><img src="../../../../images/philosophy/wasabi.png"
+class="padded" /></p>
 <p>Notice two core components of this view:</p>
 <ol type="1">
 <li>A version of the chain that does not accept the rules that you
@@ -222,7 +223,8 @@ referring to the coins on the majority chain; <em>your</em> coins are
 valueless. Cryptocurrencies and blockchains are fundamentally social
 constructs; without other people believing in them, they mean
 nothing.</p>
-<p><img src="../../../../images/philosophy/lonely.png" /></p>
+<p><img src="../../../../images/philosophy/lonely.png"
+class="padded" /></p>
 <p>So what is the alternative view? The core idea is to look at
 blockchains as <strong><a
 href="https://vitalik.ca/general/2017/05/08/coordination_problems.html">engineering
@@ -306,10 +308,11 @@ broadcast this package to light clients. Light clients can then take the
 package and use that data to verify the block themselves, even if they
 have no other data from the chain.</p>
 <center>
-<img src="../../../../images/philosophy/fraudproof.png" />
-<br><i><small>A single block in a blockchain touches only a few
-accounts. A fraud proof would contain the data in those accounts along
-with Merkle proofs proving that that data is correct.</small></i>
+<img src="../../../../images/philosophy/fraudproof.png"
+class="padded" /> <br><i><small>A single block in a blockchain touches
+only a few accounts. A fraud proof would contain the data in those
+accounts along with Merkle proofs proving that that data is
+correct.</small></i>
 </center>
 <p><br></p>
 <p>This technique is also sometimes known as <em><a
@@ -396,7 +399,7 @@ finality-bearing proof of stake setup (which eg. ethereum 2.0 is),
 imagine a rule that once a block is finalized it can never be
 reverted.</p>
 <center>
-<img src="../../../../images/philosophy/finalizer.png" />
+<img src="../../../../images/philosophy/finalizer.png" class="padded" />
 <br><br><small><i>5 block revert limit only for illustration purposes;
 in reality the limit could be something longer like 100-1000
 blocks.</i></small>

@@ -248,7 +248,7 @@ href="#could-sharded-blockchains-do-a-better-job-of-dealing-with-network-partiti
 sharded blockchains do a better job of dealing with network
 partitions?</a></li>
 <li><a
-href="#what-are-the-unique-challenges-of-pushing-scaling-past-n--oc%5C%5E2">What
+href="#what-are-the-unique-challenges-of-pushing-scaling-past-n--oc2">What
 are the unique challenges of pushing scaling past n = O(c^2)?</a></li>
 <li><a href="#what-about-heterogeneous-sharding">What about
 heterogeneous sharding?</a></li>
@@ -293,11 +293,9 @@ of the following three properties:</p>
 <ul>
 <li><strong>Decentralization</strong> (defined as the system being able
 to run in a scenario where each participant only has access to O(c)
-resources, i.e. a regular laptop or small VPS)<br />
-</li>
+resources, i.e. a regular laptop or small VPS)</li>
 <li><strong>Scalability</strong> (defined as being able to process O(n)
-&gt; O(c) transactions)<br />
-</li>
+&gt; O(c) transactions)</li>
 <li><strong>Security</strong> (defined as being secure against attackers
 with up to O(n) resources)</li>
 </ul>
@@ -392,8 +390,9 @@ subchains are nevertheless a large improvement on the status quo.</p>
 <p>Note that there is one design that states that: "Given a malicious
 operator (the worst case), the system degrades to an on-chain token. A
 malicious operator cannot steal funds and cannot deprive people of their
-funds for any meaningful amount of
-time."—https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675.
+funds for any meaningful amount of time."—<a
+href="https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675"
+class="uri">https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675</a>.
 See also <a
 href="https://twitter.com/PhABCD/status/1090090236380626944">here</a>
 for related information.</p>
@@ -451,8 +450,7 @@ to make, and is cryptographically signed. In some systems transactions
 are called <strong>blobs</strong>, to emphasize the fact that in these
 systems these objects may contain arbitrary data and may not in all
 cases represent an attempt to perform some operation in the
-protocol.<br />
-</li>
+protocol.</li>
 <li><strong>State transition function</strong>: a function that takes a
 state, applies a transaction and outputs a new state. The computation
 involved may involve adding and subtracting balances from accounts
@@ -756,8 +754,9 @@ an O(1)-sized amount of work to create a block on that shard, and the
 value of that proof of work solution determines which shard they can
 work on next, and so on<sup><a href="#ftnt_ref8">8</a></sup>. Note that
 all of these approaches make proof of work "stateful" in some way; the
-necessity of this is fundamental. # How is the randomness for random
-sampling generated?</p>
+necessity of this is fundamental.</p>
+<h1 id="how-is-the-randomness-for-random-sampling-generated">How is the
+randomness for random sampling generated?</h1>
 <p>First of all, it is important to note that even if random number
 generation is heavily exploitable, this is not a fatal flaw for the
 protocol; rather, it simply means that there is a medium to high
@@ -770,7 +769,7 @@ distribution</a>, as described above; if one wishes to avoid a sample of
 size N being more than 50% corrupted by an attacker, and an attacker has
 p% of the global stake pool, the chance of the attacker being able to
 get such a majority during one round is:</p>
-<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image00.gif"></img></p>
+<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image00.gif" class="padded" /></p>
 <p>Here's a table for what this probability would look like in practice
 for various values of N and p:</p>
 <table>
@@ -818,10 +817,10 @@ p = 0.33
 0.0004
 </td>
 <td>
-1.83 * 10-5
+1.83 *10-5
 </td>
 <td>
-3.98 * 10-8
+3.98* 10-8
 </td>
 </tr>
 <tr>
@@ -832,13 +831,13 @@ p = 0.25
 0.0001
 </td>
 <td>
-6.63 * 10<sup>-8</sup>
+6.63 *10<sup>-8</sup>
 </td>
 <td>
-4.11 * 10<sup>-11</sup>
+4.11* 10<sup>-11</sup>
 </td>
 <td>
-1.81 * 10-17
+1.81 *10-17
 </td>
 &lt;
 </tr>
@@ -847,13 +846,13 @@ p = 0.25
 p = 0.2
 </td>
 <td>
-2.09 * 10<sup>-6</sup>
+2.09* 10<sup>-6</sup>
 </td>
 <td>
-2.14 * 10<sup>-11</sup>
+2.14 *10<sup>-11</sup>
 </td>
 <td>
-2.50 * 10<sup>-16</sup>
+2.50* 10<sup>-16</sup>
 </td>
 <td>
 3.96 * 10<sup>-26</sup>
@@ -981,7 +980,9 @@ protocol.</p>
 id="can-we-force-more-of-the-state-to-be-held-user-side-so-that-transactions-can-be-validated-without-requiring-validators-to-hold-all-state-data">Can
 we force more of the state to be held user-side so that transactions can
 be validated without requiring validators to hold all state data?</h1>
-<p>See also: https://ethresear.ch/t/the-stateless-client-concept/172</p>
+<p>See also: <a
+href="https://ethresear.ch/t/the-stateless-client-concept/172"
+class="uri">https://ethresear.ch/t/the-stateless-client-concept/172</a></p>
 <p>The techniques here tend to involve requiring users to store state
 data and provide Merkle proofs along with every transaction that they
 send. A transaction would be sent along with a Merkle
@@ -992,7 +993,7 @@ trie that would need to be traversed to access and verify the state
 information that the transaction must verify; because Merkle proofs are
 O(log(n)) sized, the proof for a transaction that accesses a constant
 number of objects would also be O(log(n)) sized.</p>
-<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image03.png" width="450"></img><br>
+<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image03.png" width="450" class="padded" /><br>
 <small><i>The subset of objects in a Merkle tree that would need to be
 provided in a Merkle proof of a transaction that accesses several state
 objects</i></small></p>
@@ -1094,7 +1095,7 @@ is spent.</li>
 then be used to perform further actions on shard M that are contingent
 on the original operation succeeding.</li>
 </ol>
-<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image01.png" width="400"></img></p>
+<p><img src="https://github.com/vbuterin/diagrams/raw/master/scalability_faq/image01.png" width="400" class="padded" /></p>
 <p>In more complex forms of sharding, transactions may in some cases
 have effects that spread out across several shards and may also
 synchronously ask for data from the state of multiple shards.</p>
@@ -1165,8 +1166,9 @@ alongside majority votes to solve it.</p>
 id="what-is-the-data-availability-problem-and-how-can-we-use-erasure-codes-to-solve-it">What
 is the data availability problem, and how can we use erasure codes to
 solve it?</h1>
-<p>See
-https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding</p>
+<p>See <a
+href="https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding"
+class="uri">https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding</a></p>
 <h1
 id="can-we-remove-the-need-to-solve-data-availability-with-some-kind-of-fancy-cryptographic-accumulator-scheme">Can
 we remove the need to solve data availability with some kind of fancy
@@ -1484,8 +1486,11 @@ decentralization (number of validating nodes), and applications that are
 prone to a high fault rate and thus require high security, such as
 torrent networks, privacy focused email like Proton mail, etc., could
 optimize for a high decentralization, low finality and high throughput,
-etc. See also https://twitter.com/VladZamfir/status/932320997021171712
-and https://ethresear.ch/t/heterogeneous-sharding/1979/2.</p>
+etc. See also <a
+href="https://twitter.com/VladZamfir/status/932320997021171712"
+class="uri">https://twitter.com/VladZamfir/status/932320997021171712</a>
+and <a href="https://ethresear.ch/t/heterogeneous-sharding/1979/2"
+class="uri">https://ethresear.ch/t/heterogeneous-sharding/1979/2</a>.</p>
 <h1 id="footnotes">Footnotes</h1>
 <ol type="1">
 <li><p><a name="ftnt_ref1"></a> Merklix tree == Merkle Patricia
@@ -1574,8 +1579,9 @@ href="https://github.com/paritytech/polkadot">here</a>.</p></li>
 to cryptographic accumulators, as well as <a
 href="https://eprint.iacr.org/2009/612.pdf">this paper</a> that gives
 the argument for the impossibility of sublinear batching. See also this
-thread:
-https://ethresear.ch/t/accumulators-scalability-of-utxo-blockchains-and-data-availability/176</p></li>
+thread: <a
+href="https://ethresear.ch/t/accumulators-scalability-of-utxo-blockchains-and-data-availability/176"
+class="uri">https://ethresear.ch/t/accumulators-scalability-of-utxo-blockchains-and-data-availability/176</a></p></li>
 </ol>
 <p>Further reading related to sharding, and more generally scalability
 and research, is available <a

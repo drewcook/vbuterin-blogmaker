@@ -159,7 +159,7 @@ The node at path <code>(b,a)</code> directly contains the node with key
 <code>baaa</code>, because there are no other keys in the tree starting
 with <code>ba</code>.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle.png" class="padded"><br><br>
 <small><i>The structure of nodes in a hexary (16 children per parent)
 Verkle tree, here filled with six (key, value)
 pairs.</i></small><br><br><br>
@@ -183,7 +183,7 @@ That may be a little complicated to understand, so here's a picture of a
 proof for the value in the <code>4ce</code> position. Sister nodes that
 must be included in the proof are highlighted in red.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle2.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle2.png" class="padded"><br><br>
 <br><br>
 </center>
 <p>That's a lot of nodes! You need to provide the sister nodes at each
@@ -218,10 +218,10 @@ replaces the function of the sister nodes in a Merkle Patricia proof,
 giving the verifier confidence that a child node really is the child at
 the given position of its parent node.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle3.png"><br><br>
-<small><i>No sister nodes required in a proof of a value in the tree;
-just the path itself plus a few short proofs to link each commitment in
-the path to the next.</i></small><br><br><br>
+<br>&lt;img src="../../../../images/verkle-files/verkle3.png
+class="padded"&gt;<br><br> <small><i>No sister nodes required in a proof
+of a value in the tree; just the path itself plus a few short proofs to
+link each commitment in the path to the next.</i></small><br><br><br>
 </center>
 <p>In practice, we use a primitive even more powerful than a vector
 commitment, called a <strong>polynomial commitment</strong>. Polynomial
@@ -324,7 +324,7 @@ commitment is actually correct. Once again, see <a
 href="https://notes.ethereum.org/nrQqhVpQRi6acQckwm1Ryg#Proof">Dankrad's
 more technical description</a> for the rest of the proof.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle5.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle5.png" class="padded"><br><br>
 <small><i>One single proof proves an unlimited number of parent-child
 relationships.</i></small><br><br><br>
 </center>

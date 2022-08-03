@@ -272,7 +272,7 @@ root</strong>: the Merkle root of the state of the rollup (meaning, the
 account balances, contract code, etc, that are "inside" the rollup).</p>
 <br>
 <center>
-<img src="../../../../images/rollup-files/diag1.png" />
+<img src="../../../../images/rollup-files/diag1.png" class="padded" />
 </center>
 <p><br></p>
 <p>Anyone can publish a <strong>batch</strong>, a collection of
@@ -283,7 +283,7 @@ state root in the batch matches its current state root; if it does, it
 switches the state root to the new state root.</p>
 <br>
 <center>
-<img src="../../../../images/rollup-files/diag2.png" />
+<img src="../../../../images/rollup-files/diag2.png" class="padded" />
 </center>
 <p><br></p>
 <p>To support depositing and withdrawing, we add the ability to have
@@ -395,7 +395,7 @@ fraud proof, proving to the contract that that batch is invalid and
 should be reverted.</p>
 <br>
 <center>
-<img src="../../../../images/rollup-files/tree.png" />
+<img src="../../../../images/rollup-files/tree.png" class="padded" />
 </center>
 <p><br></p>
 <p>A fraud proof claiming that a batch was invalid would contain the
@@ -654,7 +654,7 @@ href="https://etherscan.io/tx/0x6e311f84655af72614966705584569b52d6e314f2d61b965
 </tbody>
 </table>
 <p><small><i>Max scalability gain is calculated as (L1 gas cost) /
-(bytes in rollup * 16) * 12 million / 12.5 million.</i></small></p>
+(bytes in rollup <em>16)</em> 12 million / 12.5 million.</i></small></p>
 <p>Now, it is worth keeping in mind that these figures are overly
 optimistic for a few reasons. Most importantly, a block would almost
 never just contain one batch, at the very least because there are and

@@ -144,7 +144,7 @@ one economically penalize censorship in proof of stake?</a></li>
 href="#how-does-validator-selection-work-and-what-is-stake-grinding">How
 does validator selection work, and what is stake grinding?</a></li>
 <li><a
-href="#what-would-the-equivalent-of-a-51%25-attack-against-casper-look-like">What
+href="#what-would-the-equivalent-of-a-51-attack-against-casper-look-like">What
 would the equivalent of a 51% attack against Casper look like?</a></li>
 <li><a
 href="#that-sounds-like-a-lot-of-reliance-on-out-of-band-social-coordination-is-that-not-dangerous">That
@@ -269,8 +269,9 @@ processed, or it becomes inconsistent, as one half of the network will
 see the first transaction completed and the other half will see the
 second transaction completed. Note that the CAP theorem has nothing to
 do with scalability; it applies to sharded and non-sharded systems
-equally. See also
-https://github.com/ethereum/wiki/wiki/Sharding-FAQs#but-doesnt-the-cap-theorem-mean-that-fully-secure-distributed-systems-are-impossible-and-so-sharding-is-futile.</li>
+equally. See also <a
+href="https://github.com/ethereum/wiki/wiki/Sharding-FAQs#but-doesnt-the-cap-theorem-mean-that-fully-secure-distributed-systems-are-impossible-and-so-sharding-is-futile"
+class="uri">https://github.com/ethereum/wiki/wiki/Sharding-FAQs#but-doesnt-the-cap-theorem-mean-that-fully-secure-distributed-systems-are-impossible-and-so-sharding-is-futile</a>.</li>
 <li><a
 href="https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/"><strong>FLP
 impossibility</strong></a> - in an asynchronous setting (i.e. there are
@@ -354,11 +355,13 @@ This has the unfortunate consequence that, in the case that there are
 multiple competing chains, it is in a validator's incentive to try to
 make blocks on top of every chain at once, just to be sure:</p>
 <p><img
-src="https://raw.githubusercontent.com/vbuterin/diagrams/master/possec.png" /></p>
+src="https://raw.githubusercontent.com/vbuterin/diagrams/master/possec.png"
+class="padded" /></p>
 <p>In proof of work, doing so would require splitting one's computing
 power in half, and so would not be lucrative:</p>
 <p><img
-src="https://github.com/vbuterin/diagrams/blob/master/powsec.png?raw=true" /></p>
+src="https://github.com/vbuterin/diagrams/blob/master/powsec.png?raw=true"
+class="padded" /></p>
 <p>The result is that if all actors are narrowly economically rational,
 then even if there are no attackers, a blockchain may never reach
 consensus. If there is an attacker, then the attacker need only
@@ -394,7 +397,8 @@ block headers) into the blockchain as a later point in time at which
 point the malfeasant validator's deposit is deducted appropriately. This
 changes the incentive structure thus:</p>
 <p><img
-src="https://github.com/vbuterin/diagrams/blob/master/slasher1sec.png?raw=true" /></p>
+src="https://github.com/vbuterin/diagrams/blob/master/slasher1sec.png?raw=true"
+class="padded" /></p>
 <p>Note that for this algorithm to work, the validator set needs to be
 determined well ahead of time. Otherwise, if a validator has 1% of the
 stake, then if there are two branches A and B then 0.99% of the time the
@@ -421,7 +425,8 @@ Casper this is called a "dunkle") and on A the validator suffers a
 penalty of -F (possibly F = R). This changes the economic calculation
 thus:</p>
 <p><img
-src="https://github.com/vbuterin/diagrams/blob/master/slasher2sec.png?raw=true" /></p>
+src="https://github.com/vbuterin/diagrams/blob/master/slasher2sec.png?raw=true"
+class="padded" /></p>
 <p>The intuition here is that we can replicate the economics of proof of
 work inside of proof of stake. In proof of work, there is also a penalty
 for creating a block on the wrong chain, but this penalty is implicit in
@@ -935,13 +940,13 @@ second given <a href="http://bitcoinwatch.com/">1.67 million TH/s total
 Bitcoin hashpower</a>. Electricity in China costs <a
 href="http://www.statista.com/statistics/477995/global-prices-of-electricity-by-select-country/">$0.11
 per kWh</a>, so that's about $3 per second, or $260,000 per day. Bitcoin
-block rewards plus fees are $600 per BTC * 13 BTC per block * 144 blocks
-per day = $1.12m per day. Thus electricity itself would make up 23% of
-costs, and we can back-of-the-envelope estimate maintenance at 10% to
-give a clean 1/3 ongoing costs, 2/3 fixed costs split. This means that
-out of your $1000 fund, only $111 would go into the ASIC, $56 would go
-into paying ongoing costs, and $833 would go into investments; hence the
-Maginot-line cost of attack is 9x lower than in our original
+block rewards plus fees are $600 per BTC <em>13 BTC per block</em> 144
+blocks per day = $1.12m per day. Thus electricity itself would make up
+23% of costs, and we can back-of-the-envelope estimate maintenance at
+10% to give a clean 1/3 ongoing costs, 2/3 fixed costs split. This means
+that out of your $1000 fund, only $111 would go into the ASIC, $56 would
+go into paying ongoing costs, and $833 would go into investments; hence
+the Maginot-line cost of attack is 9x lower than in our original
 setting.</li>
 <li>Deposits are temporary, not permanent. Sure, if I voluntarily keep
 staking forever, then this changes nothing. However, I regain some of
@@ -978,7 +983,8 @@ fees. Hence, your marginal costs increase quickly. We can show the
 difference between this state of affairs and the state of affairs in
 proof of work as follows:</p>
 <p><img
-src="https://blog.ethereum.org/wp-content/uploads/2014/07/liquidity.png" /></p>
+src="https://blog.ethereum.org/wp-content/uploads/2014/07/liquidity.png"
+class="padded" /></p>
 <p>Hence, the <i>total</i> cost of proof of stake is potentially much
 lower than the marginal cost of depositing 1 more ETH into the system
 multiplied by the amount of ether currently deposited.</p>
@@ -1071,5 +1077,7 @@ stakers' interest in seeing the protocol continue to operate and
 succeed.</li>
 </ul>
 <h3 id="further-reading">Further reading</h3>
-<p>https://github.com/ethereum/wiki/wiki/Casper-Proof-of-Stake-compendium</p>
+<p><a
+href="https://github.com/ethereum/wiki/wiki/Casper-Proof-of-Stake-compendium"
+class="uri">https://github.com/ethereum/wiki/wiki/Casper-Proof-of-Stake-compendium</a></p>
  </div> 

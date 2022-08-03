@@ -109,11 +109,11 @@ MathJax = {
 <br> <br> <br>
 <title> [Mirror] Zk-SNARKs: Under the Hood </title>
 
-<p><em>This is a mirror of the post at &lt;a
-href="https://medium.com/<span class="citation"
-data-cites="VitalikButerin/zk-snarks-under-the-hood-b33151a013f6&gt;https://medium.com">@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6&gt;https://medium.com</span>/<span
-class="citation"
-data-cites="VitalikButerin/zk-snarks-under-the-hood-b33151a013f6">@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6</span></a>
+<p><em>This is a mirror of the post at &lt;a href="&lt;<a
+href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6"
+class="uri">https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6</a>&gt;<a
+href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6"
+class="uri">https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6</a>&gt;</a>
 </em></p>
 <p><em>This is the third part of a series of articles explaining how the
 technology behind zk-SNARKs works; the previous articles on <a
@@ -176,7 +176,7 @@ class="math inline">\(Q\)</span>, and multiplying both by some factor r
 <em>that I personally know</em>. Note also that thanks to the magic of
 elliptic curve pairings, checking that <span class="math inline">\(R = k
 \cdot S\)</span> <em>doesn't actually require knowing <span
-class="math inline">\(k\)</span> </em> - instead, you can simply check
+class="math inline">\(k\)</span></em> - instead, you can simply check
 whether or not <span class="math inline">\(e(R, Q) = e(P,
 S)\)</span>.</p>
 <p>Let's do something more interesting. Suppose that we have ten pairs
@@ -189,7 +189,7 @@ What do you know now? <em>You know that <span
 class="math inline">\(R\)</span> is some linear combination <span
 class="math inline">\(P_1 \cdot i_1 + P_2 \cdot i_2 + ... + P_{10} \cdot
 i_{10}\)</span>, where I know the coefficients <span
-class="math inline">\(i_1, i_2 ... i_{10}\)</span>. </em>That is, the only
+class="math inline">\(i_1, i_2 ... i_{10}\)</span>.</em>That is, the only
 way to arrive at such a pair of points <span class="math inline">\((R,
 S)\)</span> is to take some multiples of <span
 class="math inline">\(P_1, P_2 ... P_{10}\)</span> and add them together,
@@ -298,8 +298,8 @@ B + C\)</span>.</p>
 <p>Finally, we need to prove that <span class="math inline">\(A \cdot B
 - C = H \cdot Z\)</span>. We do this once again with a pairing
 check:</p>
-<p><span class="math inline">\(e(\pi _a, \pi _b) / e(\pi _c, G) ?= e(\pi
-_h, G \cdot Z(t))\)</span></p>
+<p><span class="math inline">\(e(\pi _a, \pi_b) / e(\pi_c, G) ?=
+e(\pi_h, G \cdot Z(t))\)</span></p>
 <p>Where <span class="math inline">\(\pi _h= G \cdot H(t)\)</span>. If
 the connection between this equation and <span class="math inline">\(A
 \cdot B - C = H \cdot Z\)</span> does not make sense to you, go back and
@@ -349,7 +349,8 @@ algorithm in its entirety, courtesy of ben <a
 href="https://eprint.iacr.org/2013/879.pdf">Sasson, Tromer, Virza and
 Chiesa</a>:</p>
 <p><img
-src="https://cdn-images-1.medium.com/max/2000/1*gOI0njM1tPSvmvZuIUe0MA.png" /></p>
+src="https://cdn-images-1.medium.com/max/2000/1*gOI0njM1tPSvmvZuIUe0MA.png"
+class="padded" /></p>
 <p>The first line deals with parametrization; essentially, you can think
 of its function as being to create a "custom verification key" <em>for
 the specific instance of the problem</em> where some of the arguments
@@ -367,12 +368,12 @@ proof contains eight elliptic curve points: a pair of points each for
 class="math inline">\(C(t)\)</span>, a point <span
 class="math inline">\(\pi _k\)</span> for <span class="math inline">\(b
 \cdot (A(t) + B(t) + C(t))\)</span>, and a point <span
-class="math inline">\(\pi _h\)</span> for <span
+class="math inline">\(\pi_h\)</span> for <span
 class="math inline">\(H(t)\)</span>. Seven of these points are on the
 <span class="math inline">\(F_p\)</span> curve (32 bytes each, as you
 can compress the <span class="math inline">\(y\)</span> coordinate to a
 single bit), and in the Zcash implementation one point (<span
-class="math inline">\(\pi _b\)</span>) is on the twisted curve in <span
+class="math inline">\(\pi_b\)</span>) is on the twisted curve in <span
 class="math inline">\(F_{p^2}\)</span> (64 bytes), so the total size of
 the proof is ~288 bytes.</p>
 <p>The two computationally hardest parts of creating a proof are:</p>

@@ -174,7 +174,7 @@ i\)</span>.</p>
 stop listening. At this point, there is a guarantee that honest nodes
 have all "validly seen" the same set of values.</p>
 <center>
-<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport.png" /><br><br>
+<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport.png" class="padded" /><br><br>
 <i><small>Node 1 (red) is malicious, and nodes 0 and 2 (grey) are
 honest. At the start, the two honest nodes make their proposals <span
 class="math inline">\(y\)</span> and <span
@@ -243,7 +243,7 @@ reaches all honest consensus-participating nodes after <span
 class="math inline">\(T + k \cdot D\)</span>, and so all honest
 consensus-participating nodes reject it.</p>
 <center>
-<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport2.png" />
+<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport2.png" class="padded" />
 </center>
 <p><br></p>
 <p>But we can plug this hole. We require <span
@@ -259,7 +259,7 @@ reach all other observers before time <span class="math inline">\(T + (k
 + 0.5) \cdot D\)</span>, the timeout for messages with <span
 class="math inline">\(k+1\)</span> signatures.</p>
 <center>
-<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport3.png" />
+<img src="../../../..../../../../images/99-fault-tolerant-files/Lamport3.png" class="padded" />
 </center>
 <p><br></p>
 <h3 id="retrofitting-onto-other-consensus-algorithms">Retrofitting onto

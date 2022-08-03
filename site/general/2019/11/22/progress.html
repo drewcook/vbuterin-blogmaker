@@ -145,16 +145,16 @@ trust: if there are only a few entities capable of running full nodes,
 then those entities can conspire and agree to give themselves a large
 number of additional bitcoins, and there would be no way for other users
 to see for themselves that a block is invalid without processing an
-entire block themselves.<br />
-<strong>Problem:</strong> create a blockchain design that maintains
-Bitcoin-like security guarantees, but where the maximum size of the most
-powerful node that needs to exist for the network to keep functioning is
-substantially sublinear in the number of transactions.
+entire block themselves. <strong>Problem:</strong> create a blockchain
+design that maintains Bitcoin-like security guarantees, but where the
+maximum size of the most powerful node that needs to exist for the
+network to keep functioning is substantially sublinear in the number of
+transactions.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Great theoretical progress, pending more real-world
 evaluation</strong>.
-<img src="../../../../images/progress-files/happy_face7.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face7.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>Scalability is one technical problem that we have had a huge amount
 of progress on theoretically. Five years ago, almost no one was thinking
 about sharding; now, sharding designs are commonplace. Aside from <a
@@ -223,7 +223,7 @@ controlling &lt; 25% of nodes regardless of incentives.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>Ethereum has actually survived just fine with a 13-second block time
 and no particularly advanced timestamping technology; it uses a simple
 technique where a client does not accept a block whose stated timestamp
@@ -255,7 +255,7 @@ proof-of-computation <code>Q</code> and POC_VERIFY takes <code>P</code>,
 </blockquote></li>
 </ol>
 <p>Status: <strong>Great theoretical and practical progress</strong>.
-<img src="../../../../images/progress-files/happy_face1.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face1.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>This is basically saying, build a SNARK (or STARK, or SHARK, or...).
 And <a
 href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6">we've</a>
@@ -299,7 +299,7 @@ to hide the proprietary workings of the algorithm itself.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Slow progress</strong>.
-<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>In plain English, the problem is saying that we want to come up with
 a way to "encrypt" a program so that the encrypted program would still
 give the same outputs for the same inputs, but the "internals" of the
@@ -341,7 +341,7 @@ properties.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>There have been two strands of progress on this since 2014. <a
 href="https://cryptojedi.org/papers/sphincs-20141001.pdf">SPHINCS</a>, a
 "stateless" (meaning, using it multiple times does not require
@@ -382,7 +382,7 @@ href="https://blog.ethereum.org/2014/06/19/mining/">https://blog.ethereum.org/20
 </blockquote></li>
 </ol>
 <p>Status: <strong>Solved as far as we can</strong>.
-<img src="../../../../images/progress-files/happy_face4.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face4.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>About six months after the "hard problems" list was posted, Ethereum
 settled on its ASIC-resistant proof of work algorithm: <a
 href="https://github.com/ethereum/wiki/wiki/Ethash">Ethash</a>. Ethash
@@ -428,7 +428,7 @@ data to help them cure diseases.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Probably not feasible, with one exception</strong>.
-<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>The challenge with useful proof of work is that a proof of work
 algorithm requires many properties:</p>
 <ul>
@@ -476,7 +476,7 @@ becomes "one currency unit, one vote".
 </ol>
 <p>Status: <strong>Great theoretical progress, pending more real-world
 evaluation</strong>.
-<img src="../../../../images/progress-files/happy_face1.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face1.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>Near the end of 2014, it became clear to the proof of stake community
 that some form of "weak subjectivity" <a
 href="https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity">is
@@ -546,7 +546,7 @@ drives is already close to optimal.
 </ol>
 <p>Status: <strong>A lot of theoretical progress, though still a lot to
 go, as well as more real-world evaluation</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>There are a number of <a
 href="https://en.wikipedia.org/wiki/Proof_of_space">blockchains planning
 to use proof of storage</a> protocols, including <a
@@ -567,8 +567,9 @@ One of the main problems with Bitcoin is the issue of price volatility ...
 Problem: construct a cryptographic asset with a stable price.
 </blockquote></li>
 </ol>
-<p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<p>Status: <strong>Some progress</strong>. &lt;img
+src="../../../../images/progress-files/happy_face2.png"
+style="width:50px; height: 50px" ]class="transparent" /&gt;</p>
 <p><a href="https://makerdao.com/en/">MakerDAO</a> is now live, and has
 been holding stable for nearly two years. It has survived a 93% drop in
 the value of its underlying collateral asset (ETH), and there is now
@@ -613,7 +614,7 @@ another problem)
 </blockquote></li>
 </ol>
 <p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>The problem of funding public goods is generally understood to be
 split into two problems: the funding problem (where to get funding for
 public goods from) and the preference aggregation problem (how to
@@ -659,7 +660,7 @@ reputation given a record of a particular open or finalized interaction.
 </blockquote></li>
 </ol>
 <p>Status: <strong>Slow progress</strong>.
-<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face3.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>There hasn't really been much work on reputation systems since 2014.
 Perhaps the best is the use of token curated registries to create
 curated lists of trustable entities/objects; the <a
@@ -690,7 +691,7 @@ for coming up with mathematical proofs of certain theorems
 </blockquote></li>
 </ol>
 <p>Status: <strong>No progress, problem is largely forgotten</strong>.
-<img src="../../../../images/progress-files/happy_face5.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face5.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>The main alternative approach to token distribution that has instead
 become popular is <a
 href="https://en.wikipedia.org/wiki/Airdrop_%28cryptocurrency%29">airdrops</a>;
@@ -715,7 +716,7 @@ egalitarian features than "one-dollar-one-vote"; arguably,
 one-person-one-vote would be ideal.
 </blockquote>
 <p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>There have been quite a few attempts at solving the unique-human
 problem. Attempts that come to mind include (incomplete list!):</p>
 <ul>
@@ -748,7 +749,7 @@ actually accomplished the production of the public good. This challenge
 deals with the latter issue.
 </blockquote>
 <p>Status: <strong>Some progress, some change in focus</strong>.
-<img src="../../../../images/progress-files/happy_face6.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face6.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>More recent work on determining value of public-good contributions
 does not try to separate determining tasks and determining quality of
 completion; the reason is that in practice the two are difficult to
@@ -800,7 +801,7 @@ of an asset, temperature, global CO2 concentration)
 </blockquote></li>
 </ol>
 <p>Status: <strong>Some progress</strong>.
-<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" /></p>
+<img src="../../../../images/progress-files/happy_face2.png" style="width:50px; height: 50px" class="transparent" /></p>
 <p>This is now generally just called "the oracle problem". The largest
 known instance of a decentralized oracle running is <a
 href="https://www.augur.net/">Augur</a>, which has processed outcomes

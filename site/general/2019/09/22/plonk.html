@@ -155,7 +155,7 @@ a kind of STARK</a>) or DARK (based on hidden-order groups). This means
 the scheme is theoretically compatible with any (achievable) tradeoff
 between proof size and security assumptions.</p>
 <center>
-<img src="../../../../images/plonk-files/Tradeoffs.png" />
+<img src="../../../../images/plonk-files/Tradeoffs.png" class="padded" />
 </center>
 <p><br></p>
 <p>What this means is that use cases that require different tradeoffs
@@ -199,12 +199,12 @@ class="math inline">\(P(x) = x^3 + x + 5 = 35\)</span> (hint: <span
 title="Though other solutions also exist over fields where -31 has a square root; since SNARKs are done over prime fields this is something to watch out for!"><span
 class="math inline">\(x = 3\)</span></span>):</p>
 <center>
-<img src="../../../../images/plonk-files/Circuit.png" />
+<img src="../../../../images/plonk-files/Circuit.png" class="padded" />
 </center>
 <p><br></p>
 <p>We can label the gates and wires as follows:</p>
 <center>
-<img src="../../../../images/plonk-files/Circuit2.png" />
+<img src="../../../../images/plonk-files/Circuit2.png" class="padded" />
 </center>
 <p><br></p>
 <p>On the gates and wires, we have two types of constraints:
@@ -262,8 +262,8 @@ they have a bunch of <span class="math inline">\(x_{a_i},
 x_{b_i}\)</span> and <span class="math inline">\(x_{c_i}\)</span> values
 that satisfy a bunch of equations that are of the same form. This is
 still a big problem, but unlike "find a satisfying input to this
-computer program" it's a very <em>structured</em> big problem, and we
-have mathematical tools to "compress" it.</p>
+computer program" it's a very_structured_ big problem, and we have
+mathematical tools to "compress" it.</p>
 <h3 id="from-linear-systems-to-polynomials">From linear systems to
 polynomials</h3>
 <p>If you have read about <a

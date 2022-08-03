@@ -143,7 +143,8 @@ class="math inline">\(f(x, w)\)</span> themselves, even if they know
 <span class="math inline">\(w\)</span>.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/definition.png" /></p>
+<p><img src="../../../../images/using_snarks/definition.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>This gives the ZK-SNARK its two properties: <strong>privacy</strong>
@@ -213,7 +214,8 @@ class="math inline">\(A\)</span> is in the relevant part of the
 tree.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/merkle_tree.png" /></p>
+<p><img src="../../../../images/using_snarks/merkle_tree.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p><em>Advanced readers: A very new and more efficient alternative to
@@ -237,7 +239,8 @@ class="math inline">\(N = hash(s, 2)\)</span>, which we call the
 <em>nullifier</em>. The state gets stored in a Merkle tree.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/coin.png" /></p>
+<p><img src="../../../../images/using_snarks/coin.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>To spend a coin, the sender must make a ZK-SNARK where:</p>
@@ -352,19 +355,20 @@ Our core technique will rely on the "two points make a line" trick: if
 you reveal one point on a line, you've revealed little, but if you
 reveal two points on a line, you've revealed the whole line.</p>
 <p>For each epoch <span class="math inline">\(e\)</span>, we take the
-line <span class="math inline">\(L_e(x) = hash(k, e) * x + k\)</span>.
+line <span class="math inline">\(L_e(x) = hash(k, e) *x + k\)</span>.
 The slope of the line is <span class="math inline">\(hash(k,
 e)\)</span>, and the y-intercept is <span
 class="math inline">\(k\)</span>; neither is known to the public. To
 make a <em>certificate</em> for a message <span
 class="math inline">\(m\)</span>, the sender provides <span
 class="math inline">\(y = L_e(hash(m)) =\)</span> <span
-class="math inline">\(hash(k, e) * hash(m) + k\)</span>, along with a
+class="math inline">\(hash(k, e)* hash(m) + k\)</span>, along with a
 ZK-SNARK proving that <span class="math inline">\(y\)</span> was
 computed correctly.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/line.png" /></p>
+<p><img src="../../../../images/using_snarks/line.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>To recap, the ZK-SNARK here is as follows:</p>
@@ -395,10 +399,10 @@ k\)</span></li>
 <p>But what if someone uses a single epoch twice? That means they
 published two values <span class="math inline">\(m_1\)</span> and <span
 class="math inline">\(m_2\)</span> and the corresponding certificate
-values <span class="math inline">\(y_1 = hash(k, e) * hash(m_1) +
-k\)</span> and <span class="math inline">\(y_2 = hash(k, e) * hash(m_2)
-+ k\)</span>. We can use the two points to recover the line, and hence
-the y-intercept (which is the private key):</p>
+values <span class="math inline">\(y_1 = hash(k, e) *hash(m_1) +
+k\)</span> and <span class="math inline">\(y_2 = hash(k, e)* hash(m_2) +
+k\)</span>. We can use the two points to recover the line, and hence the
+y-intercept (which is the private key):</p>
 <center>
 <p><br></p>
 <p><span class="math inline">\(k = y_1 - hash(m_1) * \frac{y_2 -
@@ -531,7 +535,8 @@ proof would finally check <span class="math inline">\(u = u_{prev} +
 \delta\)</span>.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/0chan.png" /></p>
+<p><img src="../../../../images/using_snarks/0chan.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>If we want a "three strikes and you're out" rule, the ZK-SNARK would

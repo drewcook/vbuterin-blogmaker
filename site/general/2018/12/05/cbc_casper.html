@@ -140,7 +140,7 @@ points to one specific parent block. Clearly, if we wanted to make
 something maximally simple, we could just take this structure, impose a
 longest chain rule on top of it, and call it a day.</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain3.png" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain3.png" class="padded" /><br><br>
 <small><i>The green chain is the longest chain (length 6) so it is
 considered to be the "canonical chain".</i></small>
 </center>
@@ -175,7 +175,7 @@ A client evaluating the LMD GHOST fork choice rule cares only about the
 most recent (ie. highest-slot) message (ie. block) signed by each
 validator:</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain4.png" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain4.png" class="padded" /><br><br>
 <small><i>Latest messages in blue, slots from left to right (eg. <span
 class="math inline">\(A\)</span>'s block on the left is at slot 0,
 etc.)</i></small>
@@ -190,7 +190,7 @@ and keep doing this until you reach a block with no children. We can
 compute for each block the subset of latest messages that support either
 the block or one of its descendants:</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain5.png" /><br>
+<img src="../../../../images/cbc-casper-files/Chain5.png" class="padded" /><br>
 </center>
 <p><br></p>
 <p>Now, to compute the head, we start at the beginning, and then at each
@@ -203,13 +203,13 @@ chain rule <em>will</em> give the exact same answer. But in more extreme
 circumstances, this is not always true. For example, consider the
 following chain, with a more substantial three-block fork:</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain6.png" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain6.png" class="padded" /><br><br>
 <small><i>Scoring blocks by chain length. If we follow the longest chain
 rule, the top chain is longer, so the top chain wins.</i></small><br>
 </center>
 <br>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain7.png" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain7.png" class="padded" /><br><br>
 <small><i>Scoring blocks by number of supporting latest messages and
 using the GHOST rule (latest message from each validator shown in blue).
 The bottom chain has more recent support, so if we follow the LMD GHOST
@@ -230,7 +230,7 @@ class="math inline">\(\frac{4}{5}\)</span> of validators voted for the
 same chain (we'll assume that the one of the five validators that did
 not, <span class="math inline">\(B\)</span>, is attacking):</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain8.png" /><br>
+<img src="../../../../images/cbc-casper-files/Chain8.png" class="padded" /><br>
 </center>
 <p><br></p>
 <p>What would need to actually happen for the chain on top to become the
@@ -242,24 +242,24 @@ for a fact at least some of the messages that the validators must have
 seen at different times. Here is what we know about the four validators'
 views:</p>
 <center>
-<table style="text-align:center" cellpadding="20px">
+<table class="transparent centered" cellpadding="20px">
 <tr>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain9.png" width="320px" /><br><br><i>A's
+<img src="../../../../images/cbc-casper-files/Chain9.png" width="320px" class="padded" /><br><br><i>A's
 view</i>
 </td>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain10.png" width="320px" /><br><br><i>C's
+<img src="../../../../images/cbc-casper-files/Chain10.png" width="320px" class="padded" /><br><br><i>C's
 view</i>
 </td>
 </tr>
 <tr>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain11.png" width="320px" /><br><br><i>D's
+<img src="../../../../images/cbc-casper-files/Chain11.png" width="320px" class="padded" /><br><br><i>D's
 view</i>
 </td>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain11point5.png" width="320px" /><br><br><i>E's
+<img src="../../../../images/cbc-casper-files/Chain11point5.png" width="320px" class="padded" /><br><br><i>E's
 view</i>
 </td>
 </tr>
@@ -300,7 +300,7 @@ generally say that any validator's new message will have the same
 opinion as their previous messages, unless two other validators have
 already switched sides first.</p>
 <center>
-<p><img src="../../../../images/cbc-casper-files/Chain12.png" width="700px" /><br><br>
+<p><img src="../../../../images/cbc-casper-files/Chain12.png" width="700px" class="padded" /><br><br>
 <small></p>
 <p><em>A minimal viable attack. <span class="math inline">\(A\)</span>
 and <span class="math inline">\(C\)</span> illegally switch over to
@@ -372,7 +372,7 @@ beyond chain-like structures, and instead look at structures that
 increase the density of messages per unit time, like the Serenity beacon
 chain's attestation structure:</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain13.png" /><br>
+<img src="../../../../images/cbc-casper-files/Chain13.png" class="padded" /><br>
 </center>
 <p><br></p>
 <p>In this case, it becomes worthwhile to separate <em>attestations</em>
@@ -391,7 +391,7 @@ to be valid, the block's parent must be the result of executing the LMD
 GHOST fork choice rule given the information included in the chain
 including in the block itself.</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain14.png" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain14.png" class="padded" /><br><br>
 <small><i>Dotted lines are uncle links, eg. when E creates a block, E
 notices that C is not yet part of the chain, and so includes a reference
 to C.</i></small>
@@ -405,13 +405,13 @@ class="math inline">\(M_2\)</span> is attesting to or <span
 class="math inline">\(M_2\)</span> is in the chain that <span
 class="math inline">\(M_2\)</span> is attesting to.</p>
 <center>
-<table style="text-align:center" cellpadding="20px">
+<table class="transparent centered" cellpadding="20px">
 <tr>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain15.png" width="300px" /><br>OK
+<img src="../../../../images/cbc-casper-files/Chain15.png" width="300px" class="padded" /><br>OK
 </td>
 <td>
-<img src="../../../../images/cbc-casper-files/Chain16.png" width="300px" /><br>Not
+<img src="../../../../images/cbc-casper-files/Chain16.png" width="300px" class="padded" /><br>Not
 OK
 </td>
 </tr>
@@ -444,12 +444,12 @@ class="math inline">\(H\)</span>. From there, the chain can proceed
 smoothly, and will eventually satisfy a clique oracle, at which point
 <span class="math inline">\(H\)</span> becomes finalized.</p>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain17.png" height="100px" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain17.png" height="100px" class="padded" /><br><br>
 <small><i>Chaotic network due to high latency.</i></small><br>
 </center>
 <br>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain18.png" height="100px" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain18.png" height="100px" class="padded" /><br><br>
 <small><i>Network latency subsides, a majority of validators see all of
 the same blocks or at least enough of them to get to the same head when
 executing the fork choice, and start building on the head, further
@@ -457,7 +457,7 @@ reinforcing its advantage in the fork choice rule.</i></small><br>
 </center>
 <br>
 <center>
-<img src="../../../../images/cbc-casper-files/Chain19.png" height="100px" /><br><br>
+<img src="../../../../images/cbc-casper-files/Chain19.png" height="100px" class="padded" /><br><br>
 <small><i>Chain proceeds "peacefully" at low latency. Soon, a clique
 oracle will be satisfied.</i></small>
 </center>
