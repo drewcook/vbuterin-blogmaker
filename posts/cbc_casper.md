@@ -64,11 +64,11 @@ What would need to actually happen for the chain on top to become the canonical 
 
 <center>
 <table class="transparent centered" cellpadding="20px"><tr>
-<td><img src="../../../../images/cbc-casper-files/Chain9.png" width="320px" /><br><br><i>A's view</i></td>
-<td><img src="../../../../images/cbc-casper-files/Chain10.png" width="320px" /><br><br><i>C's view</i></td>
+<td><img src="../../../../images/cbc-casper-files/Chain9.png" width="320px" class="padded" /><br><br><i>A's view</i></td>
+<td><img src="../../../../images/cbc-casper-files/Chain10.png" width="320px" class="padded" /><br><br><i>C's view</i></td>
 </tr><tr>
-<td><img src="../../../../images/cbc-casper-files/Chain11.png" width="320px" /><br><br><i>D's view</i></td>
-<td><img src="../../../../images/cbc-casper-files/Chain11point5.png" width="320px" /><br><br><i>E's view</i></td>
+<td><img src="../../../../images/cbc-casper-files/Chain11.png" width="320px" class="padded" /><br><br><i>D's view</i></td>
+<td><img src="../../../../images/cbc-casper-files/Chain11point5.png" width="320px" class="padded" /><br><br><i>E's view</i></td>
 </tr></table>
 <small><i>Blocks produced by each validator in green, the latest messages we know that they saw from each of the other validators in blue.</i></small>
 </center>
@@ -126,8 +126,8 @@ We now can make CBC Casper safe with only one slashing condition: you cannot mak
 
 <center>
 <table class="transparent centered" cellpadding="20px"><tr>
-<td><img src="../../../../images/cbc-casper-files/Chain15.png" width="300px" /><br>OK</td>
-<td><img src="../../../../images/cbc-casper-files/Chain16.png" width="300px" /><br>Not OK</td>
+<td><img src="../../../../images/cbc-casper-files/Chain15.png" width="300px" class="padded" /><br>OK</td>
+<td><img src="../../../../images/cbc-casper-files/Chain16.png" width="300px" class="padded" /><br>Not OK</td>
 </tr></table>
 </center>
 
