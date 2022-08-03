@@ -3,7 +3,7 @@
 [title]: <> ([Mirror] Zk-SNARKs: Under the Hood)
 [pandoc]: <> (--mathjax)
 
-_This is a mirror of the post at <a href="<https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6>https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6></a> _
+_This is a mirror of the post at <a href="<<https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6>><https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6>></a> _
 
 *This is the third part of a series of articles explaining how the technology behind zk-SNARKs works; the previous articles on [quadratic arithmetic programs](https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649) and [elliptic curve pairings](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627) are required reading, and this article will assume knowledge of both concepts. Basic knowledge of what zk-SNARKs are and what they do is also assumed. See also [Christian Reitwiessner’s article here](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) for another technical introduction.*
 
@@ -71,7 +71,7 @@ The next step is to make sure that all three linear combinations have the same c
 
 Finally, we need to prove that $A \cdot B - C = H \cdot Z$. We do this once again with a pairing check:
 
-$e(\pi _a, \pi_b) / e(\pi _c, G) ?= e(\pi_h, G \cdot Z(t))$
+$e(\pi _a, \pi_b) / e(\pi_c, G) ?= e(\pi_h, G \cdot Z(t))$
 
 Where $\pi _h= G \cdot H(t)$. If the connection between this equation and $A \cdot B - C = H \cdot Z$ does not make sense to you, go back and read the [article on pairings](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627).
 
@@ -91,11 +91,11 @@ The encrypted `old_balance`, `tx_value` and `new_balance` should be specified pu
 
 Now, let’s step back a bit. First of all, here’s the verification algorithm in its entirety, courtesy of ben [Sasson, Tromer, Virza and Chiesa](https://eprint.iacr.org/2013/879.pdf):
 
-![](https://cdn-images-1.medium.com/max/2000/1*gOI0njM1tPSvmvZuIUe0MA.png)
+![](https://cdn-images-1.medium.com/max/2000/1*gOI0njM1tPSvmvZuIUe0MA.png){.padded}
 
 The first line deals with parametrization; essentially, you can think of its function as being to create a “custom verification key” *for the specific instance of the problem* where some of the arguments are specified. The second line is the linear combination check for $A, B$ and $C$; the third line is the check that the linear combinations have the same coefficients, and the fourth line is the product check $A \cdot B - C = H \cdot Z$.
 
-Altogether, the verification process is a few elliptic curve multiplications (one for each “public” input variable), and five pairing checks, one of which includes an additional pairing multiplication. The proof contains eight elliptic curve points: a pair of points each for $A(t), B(t)$ and $C(t)$, a point $\pi _k$ for $b \cdot (A(t) + B(t) + C(t))$, and a point $\pi_h$ for $H(t)$. Seven of these points are on the $F_p$ curve (32 bytes each, as you can compress the $y$ coordinate to a single bit), and in the Zcash implementation one point ($\pi _b$) is on the twisted curve in $F_{p^2}$ (64 bytes), so the total size of the proof is ~288 bytes.
+Altogether, the verification process is a few elliptic curve multiplications (one for each “public” input variable), and five pairing checks, one of which includes an additional pairing multiplication. The proof contains eight elliptic curve points: a pair of points each for $A(t), B(t)$ and $C(t)$, a point $\pi _k$ for $b \cdot (A(t) + B(t) + C(t))$, and a point $\pi_h$ for $H(t)$. Seven of these points are on the $F_p$ curve (32 bytes each, as you can compress the $y$ coordinate to a single bit), and in the Zcash implementation one point ($\pi_b$) is on the twisted curve in $F_{p^2}$ (64 bytes), so the total size of the proof is ~288 bytes.
 
 The two computationally hardest parts of creating a proof are:
 
