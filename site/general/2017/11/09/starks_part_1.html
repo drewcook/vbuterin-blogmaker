@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -143,7 +143,7 @@ class="math inline">\(x\)</span> is. Furthermore, for the proof to be
 <em>succinct</em>, you want it to be verifiable much more quickly than
 computing <span class="math inline">\(f\)</span> itself.</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic1.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic1.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>Let's go through a few examples:</p>
@@ -180,7 +180,7 @@ hash of the last block, and <span class="math inline">\(y\)</span> is
 the hash of the block you just downloaded.</li>
 </ul>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic2.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic2.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>So what's so hard about all this? As it turns out, the <em>zero
@@ -218,7 +218,7 @@ deviation in the original data will change at least 1,000,000 points.
 The algorithms shown here will make heavy use of polynomials in this way
 for <em>error amplification</em>.</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic_2p5.png" style="width:300px" /><br><br>
+<img src="../../../../images/starks-part-1-files/starks_pic_2p5.png" style="width:300px" class="padded" /><br><br>
 <small>Changing even one point in the original data will lead to large
 changes in a polynomial's trajectory</small>
 </center>
@@ -246,7 +246,7 @@ class="math inline">\(P\)</span> which satisfies the constraint in
 sampling only a few values will almost always miss that value. So what
 <em>can</em> we do?</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic3.png" style="width:300px" />
+<img src="../../../../images/starks-part-1-files/starks_pic3.png" style="width:300px" class="padded" />
 </center>
 <p><br></p>
 <p>Let's mathematically transform the problem somewhat. Let <span
@@ -259,7 +259,7 @@ class="math inline">\(C(x)\)</span>: <span class="math inline">\(x \cdot
 polynomials and other values use exclusively integers, so we don't need
 to worry about numbers in between).</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic4.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic4.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>Now, the problem becomes: prove that you know <span
@@ -296,7 +296,7 @@ This includes the 1 million points where <span class="math inline">\(0
 \leq P(x) \leq 9\)</span> as well as the 999 million points where that
 (probably) is not the case.</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic5.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic5.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>We assume the verifier already knows the evaluation of <span
@@ -320,7 +320,7 @@ root that was provided earlier, and (ii) <span
 class="math inline">\(C(P(x))\)</span> actually equals <span
 class="math inline">\(Z(x) \cdot D(x)\)</span> in all 16 cases.</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic6.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic6.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>We know that this proof <em>perfect completeness</em> - if you
@@ -373,7 +373,7 @@ probability of at least <span class="math inline">\(1 -
 it would take a malicious prover billions of years to make a passable
 proof.</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic7.png" style="width:500px" />
+<img src="../../../../images/starks-part-1-files/starks_pic7.png" style="width:500px" class="padded" />
 </center>
 <p><br></p>
 <h3 id="going-further">Going Further</h3>
@@ -390,7 +390,7 @@ for all <span class="math inline">\(x\)</span> then <span
 class="math inline">\(P(x)\)</span> represents a Fibonacci
 sequence).</p>
 <center>
-<img src="../../../../images/starks-part-1-files/starks_pic8.png" style="width:350px" />
+<img src="../../../../images/starks-part-1-files/starks_pic8.png" style="width:350px" class="padded" />
 </center>
 <p><br></p>
 <p>The translated problem becomes: prove that you know <span

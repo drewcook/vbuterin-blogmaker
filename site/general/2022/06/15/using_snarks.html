@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -143,7 +143,8 @@ class="math inline">\(f(x, w)\)</span> themselves, even if they know
 <span class="math inline">\(w\)</span>.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/definition.png" /></p>
+<p><img src="../../../../images/using_snarks/definition.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>This gives the ZK-SNARK its two properties: <strong>privacy</strong>
@@ -213,7 +214,8 @@ class="math inline">\(A\)</span> is in the relevant part of the
 tree.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/merkle_tree.png" /></p>
+<p><img src="../../../../images/using_snarks/merkle_tree.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p><em>Advanced readers: A very new and more efficient alternative to
@@ -237,7 +239,8 @@ class="math inline">\(N = hash(s, 2)\)</span>, which we call the
 <em>nullifier</em>. The state gets stored in a Merkle tree.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/coin.png" /></p>
+<p><img src="../../../../images/using_snarks/coin.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>To spend a coin, the sender must make a ZK-SNARK where:</p>
@@ -364,7 +367,8 @@ ZK-SNARK proving that <span class="math inline">\(y\)</span> was
 computed correctly.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/line.png" /></p>
+<p><img src="../../../../images/using_snarks/line.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>To recap, the ZK-SNARK here is as follows:</p>
@@ -531,7 +535,8 @@ proof would finally check <span class="math inline">\(u = u_{prev} +
 \delta\)</span>.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/using_snarks/0chan.png" /></p>
+<p><img src="../../../../images/using_snarks/0chan.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>If we want a "three strikes and you're out" rule, the ZK-SNARK would

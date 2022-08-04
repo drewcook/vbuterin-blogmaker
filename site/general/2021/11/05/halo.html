@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -252,7 +252,8 @@ privacy for now; in general, it's not that hard to add privacy into all
 of these schemes.</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments1.png" /></p>
+<p><img src="../../../../images/halo/commitments1.png"
+class="padded" /></p>
 <p><small></p>
 <p><em>Though it's not really mathematically accurate to think of
 elliptic curve points as being like real numbers that have sizes, area
@@ -295,7 +296,8 @@ class="math inline">\(R\)</span>, representing the yellow and green
 areas in this diagram:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments2.png" /></p>
+<p><img src="../../../../images/halo/commitments2.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>You may be able to see where this is going: if you add <span
@@ -318,7 +320,8 @@ class="math inline">\(L\)</span> and <span
 class="math inline">\(R\)</span>:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments3.png" /></p>
+<p><img src="../../../../images/halo/commitments3.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Choose a random factor <span class="math inline">\(\alpha\)</span>
@@ -374,7 +377,8 @@ class="math inline">\(\alpha^2\)</span> terms.)</p>
 <p>And then we repeat the process until we get down to one point:</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments4.png" /></p>
+<p><img src="../../../../images/halo/commitments4.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Finally, we have a size-1 problem: prove that the final modified
@@ -440,7 +444,8 @@ addition for the points and regular field addition for the numbers.</p>
 <p>We can make a Pedersen commitment using this extended base!</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/commitments5.png" /></p>
+<p><img src="../../../../images/halo/commitments5.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Now, here's a puzzle. Suppose <span class="math inline">\(P(x) =
@@ -562,7 +567,8 @@ class="math inline">\(L(t) = e_1 + re_2\)</span>.</li>
 </ul>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/proof_combining.png" /></p>
+<p><img src="../../../../images/halo/proof_combining.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>The verifier still needs to do a bunch of extra steps, but all of
@@ -600,7 +606,8 @@ a proof of a proof will take even longer to verify than both proofs
 separately. But proof merging can do it!</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/recursion.png" /></p>
+<p><img src="../../../../images/halo/recursion.png"
+class="padded" /></p>
 </center>
 <p><br></p>
 <p>Essentially, we use the usual "recursive SNARK" technique to verify
@@ -718,7 +725,7 @@ requiring the last entry of <span class="math inline">\(Z\)</span> to be
 1).</p>
 <center>
 <p><br></p>
-<p><img src="../../../../images/halo/r1cs.png" style="width:450px" /></p>
+<p><img src="../../../../images/halo/r1cs.png" style="width:450px" class="padded" /></p>
 <p><br></p>
 <p><em>An R1CS instance with a single constraint (so <span
 class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>

@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -145,8 +145,8 @@ support more types of contracts without adding an equally large and
 complex set of features:</p>
 <p><a
 href="https://web.archive.org/web/20150627031414/http://vbuterin.com/ultimatescripting.html">https://web.archive.org/web/20150627031414/http://vbuterin.com/ultimatescripting.html</a></p>
-<p><img
-src="../../../../images/prehistory-files/ultimatescripting.png" /></p>
+<p><img src="../../../../images/prehistory-files/ultimatescripting.png"
+class="padded" /></p>
 <p>Notice that this is very far from the later and more expansive vision
 of Ethereum: it specialized purely in what Mastercoin was trying to
 specialize in already, namely two-party contracts where parties A and B
@@ -160,8 +160,8 @@ increasingly convinced is the correct choice. So here comes version 2,
 circa December:</p>
 <p><a
 href="https://lh6.googleusercontent.com/soPo_aa2YSpV8DvGGZbGjAkZehtiqJEa8dPzOM4ZSZxAvZcAfNbnVqErQL1JlG8lcmgpQyXmb3cO9m21asJQKZZmTXGQsLOtvTgBTp_5LOxfdWRZpgh3pys7Os3GK5dFGCL6aIpd">https://web.archive.org/web/20131219030753/http://vitalik.ca/ethereum.html</a></p>
-<p><img
-src="../../../../images/prehistory-files/ethereumwhitepaper.png" /></p>
+<p><img src="../../../../images/prehistory-files/ethereumwhitepaper.png"
+class="padded" /></p>
 <p>Here you can see the results of a substantial rearchitecting, largely
 a result of a long walk through San Francisco I took in November once I
 realized that smart contracts could potentially be fully generalized.
@@ -174,7 +174,8 @@ registers). The language switched from being a stack-based machine to
 being a register-based one on my own volition; I had little argument for
 this other than that it seemed more sophisticated.</p>
 <p>Additionally, notice that there is now a built-in fee mechanism:</p>
-<p><img src="../../../../images/prehistory-files/txfee.png" /></p>
+<p><img src="../../../../images/prehistory-files/txfee.png"
+class="padded" /></p>
 <p>At this point, ether literally was gas; after every single
 computational step, the balance of the contract that a transaction was
 calling would drop a little bit, and if the contract ran out of money
@@ -416,8 +417,8 @@ economics, as well as the Patricia tree. This audit led to several
 protocol changes. One small one is the use of sha3(addr) and sha3(key)
 as trie keys instead of the address and key directly; this would make it
 harder to perform a worst-case attack on the trie.</p>
-<p><img
-src="../../../../images/prehistory-files/leastauthority.png" /></p>
+<p><img src="../../../../images/prehistory-files/leastauthority.png"
+class="padded" /></p>
 <center>
 <small><i>And a warning that was perhaps a bit too far ahead of its
 time...</i></small>

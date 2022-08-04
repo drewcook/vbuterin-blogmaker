@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -159,7 +159,7 @@ The node at path <code>(b,a)</code> directly contains the node with key
 <code>baaa</code>, because there are no other keys in the tree starting
 with <code>ba</code>.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle.png" class="padded" /><br><br>
 <small><i>The structure of nodes in a hexary (16 children per parent)
 Verkle tree, here filled with six (key, value)
 pairs.</i></small><br><br><br>
@@ -183,7 +183,7 @@ That may be a little complicated to understand, so here's a picture of a
 proof for the value in the <code>4ce</code> position. Sister nodes that
 must be included in the proof are highlighted in red.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle2.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle2.png" class="padded" /><br><br>
 <br><br>
 </center>
 <p>That's a lot of nodes! You need to provide the sister nodes at each
@@ -218,10 +218,11 @@ replaces the function of the sister nodes in a Merkle Patricia proof,
 giving the verifier confidence that a child node really is the child at
 the given position of its parent node.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle3.png"><br><br>
-<small><i>No sister nodes required in a proof of a value in the tree;
-just the path itself plus a few short proofs to link each commitment in
-the path to the next.</i></small><br><br><br>
+<br>&lt;img src="../../../../images/verkle-files/verkle3.png
+class="padded" /&gt;<br><br> <small><i>No sister nodes required in a
+proof of a value in the tree; just the path itself plus a few short
+proofs to link each commitment in the path to the
+next.</i></small><br><br><br>
 </center>
 <p>In practice, we use a primitive even more powerful than a vector
 commitment, called a <strong>polynomial commitment</strong>. Polynomial
@@ -254,7 +255,7 @@ node, nearly 3x more space-efficient than a simple Merkle proof</strong>
 if we set width = 256. However, it turns out that we can increase
 space-efficiency even further.</p>
 <center>
-<br><img src="../../../../images/verkle-files/notfinalform.png"><br><br>
+<br><img src="../../../../images/verkle-files/notfinalform.png" /><br><br>
 </center>
 <p><br></p>
 <h2 id="merging-the-proofs">Merging the proofs</h2>
@@ -324,7 +325,7 @@ commitment is actually correct. Once again, see <a
 href="https://notes.ethereum.org/nrQqhVpQRi6acQckwm1Ryg#Proof">Dankrad's
 more technical description</a> for the rest of the proof.</p>
 <center>
-<br><img src="../../../../images/verkle-files/verkle5.png"><br><br>
+<br><img src="../../../../images/verkle-files/verkle5.png" class="padded" /><br><br>
 <small><i>One single proof proves an unlimited number of parent-child
 relationships.</i></small><br><br><br>
 </center>

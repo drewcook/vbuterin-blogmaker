@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -112,8 +112,7 @@ MathJax = {
 <p><em>This is a mirror of the post at
 <a href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649">https://medium.com/<span
 class="citation"
-data-cites="VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649">@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649</span></a>
-</em></p>
+data-cites="VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649">@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649</span></a></em></p>
 <p>There has been a lot of interest lately in the technology behind
 zk-SNARKs, and people are increasingly <a
 href="https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/">trying
@@ -135,7 +134,8 @@ deeper into the machinery behind the technology, and tries to explain as
 well as possible the first half of the pipeline, as drawn by zk-SNARK
 researcher Eran Tromer here:</p>
 <p><img
-src="https://cdn-images-1.medium.com/max/2000/1*YD-ckgBfmmmRBCyVlhp8YQ.png" /></p>
+src="https://cdn-images-1.medium.com/max/2000/1*YD-ckgBfmmmRBCyVlhp8YQ.png"
+class="padded" /></p>
 <p>The steps here can be broken up into two halves. First, zk-SNARKs
 cannot be applied to any computational problem directly; rather, you
 have to convert the problem into the right "form" for the problem to
@@ -243,7 +243,7 @@ product of the first two results. For example, this is a satisfied
 R1CS:</p>
 <br>
 <center>
-<img src="https://cdn-images-1.medium.com/max/2000/1*wp6bmXoPEU_zZHzJFRq6IQ.png" />
+<img src="https://cdn-images-1.medium.com/max/2000/1*wp6bmXoPEU_zZHzJFRq6IQ.png" class="padded" />
 </center>
 <p><br></p>
 <p>But instead of having just one constraint, we are going to have many
@@ -489,7 +489,7 @@ check <em>all of the constraints at the same time</em> by doing the dot
 product check <em>on the polynomials</em>.</p>
 <br>
 <center>
-<img src="https://cdn-images-1.medium.com/max/2000/1*QD2EfVsbNguEXrjKJwNVMg.png" />
+<img src="https://cdn-images-1.medium.com/max/2000/1*QD2EfVsbNguEXrjKJwNVMg.png" class="padded" />
 </center>
 <p><br></p>
 <p>Because in this case the dot product check is a series of additions

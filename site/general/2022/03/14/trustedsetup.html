@@ -52,14 +52,14 @@ MathJax = {
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
 <div id="color-mode-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <input type="checkbox" id="switch" />
-    <label for="switch">Dark Mode Toggle</label>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+  <input type="checkbox" id="switch" />
+  <label for="switch">Dark Mode Toggle</label>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+  </svg>
 </div>
 
 <script type="text/javascript">
@@ -130,7 +130,8 @@ and forget the secrets. But once the data is generated, and the secrets
 are forgotten, no further participation from the creators of the
 ceremony is required.</p>
 <center>
-<p><img src="../../../../images/trustedsetup/setup1.png" /></p>
+<p><img src="../../../../images/trustedsetup/setup1.png"
+class="padded" /></p>
 </center>
 <p>There are many types of trusted setups. The earliest instance of a
 trusted setup being used in a major protocol is the <a
@@ -210,7 +211,8 @@ class="math inline">\([S_0, S_1 ... S_i ... S_{n-1}]\)</span> would
 commit to a different polynomial if we use the base points <span
 class="math inline">\([S_0, S_1 ... (S_i * 2) ... S_{n-1}]\)</span>.</p>
 <center>
-<p><img src="../../../../images/trustedsetup/ipa_bases.png" /></p>
+<p><img src="../../../../images/trustedsetup/ipa_bases.png"
+class="padded" /></p>
 <p><small></p>
 <p><em>A valid commitment to the polynomial <span
 class="math inline">\(3x^3 + 8x^2 + 2x + 6\)</span> under one set of
@@ -262,8 +264,8 @@ one specific person!</p>
 for smaller setups it's possible to get over 1000. Here is how a
 multi-participant powers-of-tau setup works.</p>
 <center>
-<p><img
-src="../../../../images/trustedsetup/multiparticipants.png" /></p>
+<p><img src="../../../../images/trustedsetup/multiparticipants.png"
+class="padded" /></p>
 </center>
 <p>Take an existing setup (note that you don't know <span
 class="math inline">\(s\)</span>, you just know the points):</p>
@@ -307,7 +309,8 @@ forgetting the previous values and outputting a setup with just their
 own secret, which they keep so they can cheat in any protocols that use
 the setup).</p>
 <center>
-<p><img src="../../../../images/trustedsetup/verifying.png" /></p>
+<p><img src="../../../../images/trustedsetup/verifying.png"
+class="padded" /></p>
 <p><small></p>
 <p><em><span class="math inline">\(s_1\)</span> is the first
 participant's secret, <span class="math inline">\(s_2\)</span> is the
